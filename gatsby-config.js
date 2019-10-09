@@ -75,5 +75,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: "/reponame",
+  pathPrefix: "/F19-W02-IntroWeb",
 }
