@@ -27,30 +27,30 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-caf7fe50bb40bf9736ca.js"
+    "url": "webpack-runtime-6e07031bbc870b4c6825.js"
   },
   {
-    "url": "commons-6420be4ad25282c5ec90.js"
+    "url": "commons-871b3c0dabf1ba361da7.js"
   },
   {
-    "url": "styles.5f81339daa9828444137.css"
+    "url": "styles.d953c7917b7b14156dff.css"
   },
   {
-    "url": "styles-06a17045aea2c790ce4b.js"
+    "url": "styles-f7093a2557a97499d627.js"
   },
   {
-    "url": "app-95551c4c2711190d17ee.js"
+    "url": "app-128ffc2120b2127cc647.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-4874c99e953d50960c32.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "074ce3f2fde880d815cd6dbee4ed687b"
+    "revision": "36550696164ce968c8ac900fa795ac1d"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "da95ecf549255360ffe8b6a18fec18ce"
+    "revision": "5b2968eef0029bc220b5599a32a370b3"
   },
   {
     "url": "manifest.webmanifest",
@@ -77,12 +77,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   }
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/F19-W02-IntroWeb`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-95551c4c2711190d17ee.js`))) {
+  if (!resources || !(await caches.match(`/F19-W02-IntroWeb/app-128ffc2120b2127cc647.js`))) {
     return await fetch(event.request)
   }
 
@@ -95,7 +95,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/F19-W02-IntroWeb/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
