@@ -2,6 +2,7 @@
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+    <img alt="CMUBTG" src="https://cmubtg.com/static/media/btg-logo-white-red.bb62b0d4.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
